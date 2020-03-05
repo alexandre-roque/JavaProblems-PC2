@@ -81,20 +81,22 @@ public class Turma {
         }
         return false;
     }
-    public void listarAlunos(Aluno[] alunos){
+    public void listarAlunos(){
         for(int i = 0;i<alunos.length ;i++){
-            System.out.println(alunos[i].getNome());
-            System.out.println(alunos[i].getAltura());
-            System.out.println(alunos[i].getDtNasc());
-            System.out.println(alunos[i].getPeso());
-            System.out.println(alunos[i].getSexo());
-            System.out.println(alunos[i].getTelefone());
+            if(alunos[i]!= null){
+                System.out.println(alunos[i].getNome());
+                System.out.println(alunos[i].getAltura());
+                System.out.println(alunos[i].getDtNasc());
+                System.out.println(alunos[i].getPeso());
+                System.out.println(alunos[i].getSexo());
+                System.out.println(alunos[i].getTelefone());
+            }
         }
     }
     public Integer calculaIdade(Aluno aluno){
         String[] data = new String[3];
         data = aluno.getDtNasc().split("/");
-        Integer idade = Integer.parseInt(data[2]) - 2020;
+        Integer idade = 2020 - Integer.parseInt(data[2]);
         return idade;
     }
     public boolean cancelarMatricula(Aluno aluno){
