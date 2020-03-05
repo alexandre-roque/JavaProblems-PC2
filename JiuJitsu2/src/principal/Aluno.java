@@ -74,7 +74,12 @@ public class Aluno {
         this.telefone = telefone;
     } 
     
-    
+    public Integer verificaIdade(Aluno aluno){
+        String[] data = new String[3];
+        data = aluno.getDtNasc().split("/");
+        Integer idade = 2020 - Integer.parseInt(data[2]);
+        return idade;
+    }
     
     
 }

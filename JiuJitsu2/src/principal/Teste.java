@@ -15,7 +15,8 @@ public class Teste {
         Turma femT = new Turma("Feminino",13,18,3,"Tarde");
         Turma mascN = new Turma("Masculino",19,30,3,"Noite");
         Turma femN = new Turma("Feminino",19,30,3,"Noite");
-        Turma listaEspera = new Turma(10);
+        
+        Aluno listaDeEspera = new Aluno(10);
         
        // Aluno[] alunos = {al1,al2,al3,al4,al5,al6,al7} ;
         
@@ -29,27 +30,12 @@ public class Teste {
         alunos[6]=al7;
         
         for(int i=0;i<alunos.length;i++){
-            if(mascM.calculaIdade(alunos[i])>=9 && mascM.calculaIdade(alunos[i])<=12 && alunos[i].getSexo().equals("Masculino")){
-                mascM.receberAluno(alunos[i]);
-            }
-            if(femM.calculaIdade(alunos[i])>=9 && femM.calculaIdade(alunos[i])<=12 && alunos[i].getSexo().equals("Feminino")){
-                femM.receberAluno(alunos[i]);
-            }
-            if(mascT.calculaIdade(alunos[i])>=13 && mascT.calculaIdade(alunos[i])<=18 && alunos[i].getSexo().equals("Masculino")){
-                mascT.receberAluno(alunos[i]);
-            }
-            if(femT.calculaIdade(alunos[i])>=13 && femT.calculaIdade(alunos[i])<=18 && alunos[i].getSexo().equals("Feminino")){
-                femT.receberAluno(alunos[i]);
-            }
-            if(mascN.calculaIdade(alunos[i])>=19 && mascN.calculaIdade(alunos[i])<=30 && alunos[i].getSexo().equals("Masculino")){
-                mascN.receberAluno(alunos[i]);
-            }
-            if(femN.calculaIdade(alunos[i])>=19 && femN.calculaIdade(alunos[i])<=30 && alunos[i].getSexo().equals("Feminino")){
-                femN.receberAluno(alunos[i]);
-            }
-            if(listaEspera.calculaIdade(alunos[i])<9 || listaEspera.calculaIdade(alunos[i])>30){
-                System.out.println("O aluno "+alunos[i].getNome()+" está na lista de espera por não estar dentro da idade");
-            }    
+            mascM.receberAluno(alunos[i]);
+            femM.receberAluno(alunos[i]);
+            mascT.receberAluno(alunos[i]);
+            femT.receberAluno(alunos[i]);
+            mascN.receberAluno(alunos[i]);
+            femN.receberAluno(alunos[i]);  
         }
         mascM.listarAlunos();
         femM.listarAlunos();

@@ -74,31 +74,34 @@ public class Turma {
     
     public boolean receberAluno(Aluno aluno){
         for(int i=0;i<alunos.length;i++){
+            if(!sexo.equals(aluno.getSexo())){
+                return false;
+            }
+            if(alunos[i].verificaIdade(alunos[i])<= faixaInicial && alunos[i].verificaIdade(alunos[i])>= faixaFinal){
+                return false;
+            }
             if(alunos[i] == null){
                 alunos[i] = aluno;
-                return true;
             }
+            
         }
         return false;
     }
     public void listarAlunos(){
-        for(int i = 0;i<alunos.length ;i++){
+        System.out.println("TURMA: "+sexo+" "+turno+"  ");
+        for(int i = 0 ;i<alunos.length ;i++){
             if(alunos[i]!= null){
-                System.out.println(alunos[i].getNome());
-                System.out.println(alunos[i].getAltura());
-                System.out.println(alunos[i].getDtNasc());
-                System.out.println(alunos[i].getPeso());
-                System.out.println(alunos[i].getSexo());
-                System.out.println(alunos[i].getTelefone());
+                System.out.println("Aluno(a): "+(i+1)+" ");
+                System.out.println("Nome:"+alunos[i].getNome()+"");
+                System.out.println("Altura:"+alunos[i].getAltura()+"");
+                System.out.println("DataNasc:"+alunos[i].getDtNasc()+"");
+                System.out.println("Peso:"+alunos[i].getPeso()+"");
+                //System.out.println(alunos[i].getSexo());
+                System.out.println("Telefone:"+alunos[i].getTelefone()+"");
             }
         }
     }
-    public Integer calculaIdade(Aluno aluno){
-        String[] data = new String[3];
-        data = aluno.getDtNasc().split("/");
-        Integer idade = 2020 - Integer.parseInt(data[2]);
-        return idade;
-    }
+    
     public boolean cancelarMatricula(Aluno aluno){
         for(int i=0;i<alunos.length;i++){
             if(alunos[i] == aluno){
