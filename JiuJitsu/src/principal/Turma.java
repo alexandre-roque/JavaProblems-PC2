@@ -81,4 +81,8 @@ public class Turma {
         }
         return false;
     }
+    public void listarAlunos(Aluno[] alunos){
+         for(int i = 0;i<alunos.length ;i++){
+                SystemOut.println(alunos.nome[i]);
+         }
 }
