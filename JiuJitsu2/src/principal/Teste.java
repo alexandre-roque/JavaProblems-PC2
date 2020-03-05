@@ -15,8 +15,7 @@ public class Teste {
         Turma femT = new Turma("Feminino",13,18,3,"Tarde");
         Turma mascN = new Turma("Masculino",19,30,3,"Noite");
         Turma femN = new Turma("Feminino",19,30,3,"Noite");
-        
-        Aluno listaDeEspera = new Aluno(10);
+
         
        // Aluno[] alunos = {al1,al2,al3,al4,al5,al6,al7} ;
         

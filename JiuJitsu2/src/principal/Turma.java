@@ -99,7 +99,6 @@ public class Turma {
                 //System.out.println(alunos[i].getSexo());
                 System.out.println("Telefone:"+alunos[i].getTelefone()+"");
             }
-        }
     }
     
     public boolean cancelarMatricula(Aluno aluno){
