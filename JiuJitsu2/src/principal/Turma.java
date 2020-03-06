@@ -77,11 +77,12 @@ public class Turma {
             if(!sexo.equals(aluno.getSexo())){
                 return false;
             }
-            if(alunos[i].verificaIdade(alunos[i])<= faixaInicial && alunos[i].verificaIdade(alunos[i])>= faixaFinal){
+            if((aluno.verificaIdade(aluno)< faixaInicial) || aluno.verificaIdade(aluno)> faixaFinal){
                 return false;
             }
             if(alunos[i] == null){
                 alunos[i] = aluno;
+                break;
             }
             
         }
@@ -99,6 +100,7 @@ public class Turma {
                 //System.out.println(alunos[i].getSexo());
                 System.out.println("Telefone:"+alunos[i].getTelefone()+"");
             }
+        }
     }
     
     public boolean cancelarMatricula(Aluno aluno){

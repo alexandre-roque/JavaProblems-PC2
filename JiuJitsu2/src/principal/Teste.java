@@ -2,7 +2,7 @@ package principal;
 public class Teste {
     public static void main(String[] args){
         Aluno al1 = new Aluno("Alexandre","Masculino","16/01/2001", 60.0, 1.77, "31 987569962");
-        Aluno al2 = new Aluno("Michelle","Feminino","01/03/2000", 45.0, 1.57, "31 987384920");
+        Aluno al2 = new Aluno("Michelle","Feminino","08/04/2000", 45.0, 1.57, "31 987384920");
         Aluno al3 = new Aluno("Ronaldo","Masculino","12/02/2010", 80.0, 1.82, "31 385023589");
         Aluno al4 = new Aluno("Maria","Feminino","04/07/2010", 50.0, 1.67, "31 987384920");
         Aluno al5 = new Aluno("Gabriel","Masculino","05/02/2006", 50.0, 1.67, "31 418294809");
