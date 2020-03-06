@@ -84,6 +84,9 @@ public class Turma {
                 alunos[i] = aluno;
                 break;
             }
+            else if(quantidadeMaxima - 1 == i){
+                return false;
+            }
             
         }
         return false;
@@ -98,7 +101,8 @@ public class Turma {
                 System.out.println("DataNasc:"+alunos[i].getDtNasc()+"");
                 System.out.println("Peso:"+alunos[i].getPeso()+"");
                 //System.out.println(alunos[i].getSexo());
-                System.out.println("Telefone:"+alunos[i].getTelefone()+"");
+                System.out.println("Telefone:"+alunos[i].getTelefone()+"\n");
+                
             }
         }
     }

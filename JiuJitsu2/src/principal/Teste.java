@@ -42,6 +42,8 @@ public class Teste {
         femT.listarAlunos();
         mascN.listarAlunos();
         femN.listarAlunos();
-        //cancelarMatricula(al2);
+        
+        //femN.cancelarMatricula(al2);
+        //femN.listarAlunos();
     }
 }
