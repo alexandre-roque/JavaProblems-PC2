@@ -15,13 +15,13 @@ public class Turma {
         faixaFinal = 0;
         alunos = new Aluno[quantidadeMaxima];
     }
-    public Turma(String sexo, int faixaInicial, int faixaFinal, int quantidadeMaxima, String turno, Aluno[] alunos) {
+    public Turma(String sexo, int faixaInicial, int faixaFinal, int quantidadeMaxima, String turno) {
         this.sexo = sexo;
         this.faixaInicial = faixaInicial;
         this.faixaFinal = faixaFinal;
         this.quantidadeMaxima = quantidadeMaxima;
         this.turno = turno;
-        this.alunos = alunos;
+        alunos = new Aluno[quantidadeMaxima];
     }
 
     public String getSexo() {
@@ -74,15 +74,47 @@ public class Turma {
     
     public boolean receberAluno(Aluno aluno){
         for(int i=0;i<alunos.length;i++){
+            if(!sexo.equals(aluno.getSexo())){
+                return false;
+            }
+            if((aluno.verificaIdade(aluno)< faixaInicial) || aluno.verificaIdade(aluno)> faixaFinal){
+                return false;
+            }
             if(alunos[i] == null){
                 alunos[i] = aluno;
+                break;
+            }
+            else if(quantidadeMaxima - 1 == i){
+                return false;
+            }
+            
+        }
+        return false;
+    }
+    public void listarAlunos(){
+        System.out.println("TURMA: "+sexo+" "+turno+"  ");
+        for(int i = 0 ;i<alunos.length ;i++){
+            if(alunos[i]!= null){
+                System.out.println("Aluno(a): "+(i+1)+" ");
+                System.out.println("Nome:"+alunos[i].getNome()+"");
+                System.out.println("Altura:"+alunos[i].getAltura()+"");
+                System.out.println("DataNasc:"+alunos[i].getDtNasc()+"");
+                System.out.println("Peso:"+alunos[i].getPeso()+"");
+                //System.out.println(alunos[i].getSexo());
+                System.out.println("Telefone:"+alunos[i].getTelefone()+"\n");
+                
+            }
+        }
+    }
+    
+    public boolean cancelarMatricula(Aluno aluno){
+        for(int i=0;i<alunos.length;i++){
+            if(alunos[i] == aluno){
+                alunos[i] = null;
                 return true;
             }
         }
         return false;
     }
-    public void listarAlunos(Aluno[] alunos){
-         for(int i = 0;i<alunos.length ;i++){
-                SystemOut.println(alunos.nome[i]);
-         }
+    
 }
