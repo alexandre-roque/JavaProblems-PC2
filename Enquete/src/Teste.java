@@ -1,4 +1,4 @@
-package main;
+
     import java.util.Random;
     import java.util.Scanner;
 
@@ -9,13 +9,15 @@ package main;
         Scanner input = new Scanner(System.in);
         int num = input.nextInt();
         int notas[] = new int[num] ;
-
-        Enquete enquete = new Enquete();
         
         Random gerador = new Random();
            for(int i=0;i<num;i++){
                 notas[i] = gerador.nextInt(10)+1;
            } 
-
+        Enquete enquete = new Enquete(num,notas);
+        System.out.print("Nota desejada para calcular a frêquencia:");
+        enquete.frequenciaNotas(input.nextInt());
+        enquete.notaMedia();
+        enquete.numeroClientes();
         }
     }
