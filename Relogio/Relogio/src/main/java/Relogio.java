@@ -74,8 +74,11 @@ public class Relogio {
             if(hora.getValor()>10 && hora.getValor()<12 && minuto.getValor()>10){
                 System.out.println(hora.getValor()+":"+minuto.getValor());
             }
-            if(hora.getValor()>12){
+            if(hora.getValor()>12 && minuto.getValor()<10){
                 System.out.println(hora.getValor()%12+":0"+minuto.getValor());
+            }
+            if(hora.getValor()>12 && minuto.getValor()>10){
+                System.out.println(hora.getValor()%12+":"+minuto.getValor());
             }
         }
     }
