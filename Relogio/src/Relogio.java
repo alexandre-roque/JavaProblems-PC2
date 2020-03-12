@@ -42,6 +42,10 @@ public class Relogio {
         if(hora.getValor() == 24){
             hora.setValor(0);
         }
+        if(hora.getValor() == 12 && formato==false){
+            hora.setValor(0);
+            
+        }
         
     }
     
