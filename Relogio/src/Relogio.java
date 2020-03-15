@@ -35,18 +35,9 @@ public class Relogio {
     
     public void ticTac(){
         minuto.incrementar();
-        if(minuto.getValor() == 60){
-            hora.setValor(hora.getValor()+1);
-            minuto.setValor(0);
-        }
-        if(hora.getValor() == 24){
-            hora.setValor(0);
-        }
-        if(hora.getValor() == 12 && formato==false){
-            hora.setValor(0);
-            
-        }
-        
+        if(minuto.getValor() == 0){
+            hora.incrementar();
+        }        
     }
     
     public void mostrarHora(){
@@ -67,25 +58,29 @@ public class Relogio {
         }
         if(formato==false){
             if(hora.getValor()<10 && minuto.getValor()<10){
-                System.out.println("0"+hora.getValor()+":0"+minuto.getValor());
+                System.out.println("0"+hora.getValor()+":0"+minuto.getValor()+" A.M");
             }
-            if(hora.getValor()<10 && minuto.getValor()>10){
-                System.out.println("0"+hora.getValor()+":"+minuto.getValor());
+            if(hora.getValor()<10 && minuto.getValor()>=10){
+                System.out.println("0"+hora.getValor()+":"+minuto.getValor()+" A.M");
             }
-            if(hora.getValor()>10 && minuto.getValor()<10){
-                System.out.println(hora.getValor()+":0"+minuto.getValor());
+            if((hora.getValor()>=10 && hora.getValor()<12) && minuto.getValor()<10){
+                System.out.println(hora.getValor()+":0"+minuto.getValor()+" A.M");
             }
-            if(hora.getValor()>10 && hora.getValor()<12 && minuto.getValor()<10){
-                System.out.println(hora.getValor()+":0"+minuto.getValor());
+            if((hora.getValor()>=10 && hora.getValor()<12) && minuto.getValor()>=10){
+                System.out.println(hora.getValor()+":"+minuto.getValor()+" A.M");
             }
-            if(hora.getValor()>10 && hora.getValor()<12 && minuto.getValor()>10){
-                System.out.println(hora.getValor()+":"+minuto.getValor());
+            
+            if((hora.getValor()>=12 && hora.getValor()<22) && minuto.getValor()<10){
+                System.out.println("0"+hora.getValor()%12+":0"+minuto.getValor()+" P.M");
             }
-            if(hora.getValor()>12 && minuto.getValor()<10){
-                System.out.println(hora.getValor()%12+":0"+minuto.getValor());
+            if((hora.getValor()>=12 && hora.getValor()<22) && minuto.getValor()>10){
+                System.out.println("0"+hora.getValor()%12+":"+minuto.getValor()+" P.M");
             }
-            if(hora.getValor()>12 && minuto.getValor()>10){
-                System.out.println(hora.getValor()%12+":"+minuto.getValor());
+            if((hora.getValor()>12 && hora.getValor()>=22) && minuto.getValor()<10){
+                System.out.println(hora.getValor()%12+":0"+minuto.getValor()+" P.M");
+            }
+            if((hora.getValor()>12 && hora.getValor()>=22) && minuto.getValor()>10){
+                System.out.println(hora.getValor()%12+":"+minuto.getValor()+" P.M");
             }
         }
     }

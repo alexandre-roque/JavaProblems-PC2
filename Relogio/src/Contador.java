@@ -26,10 +26,11 @@ public class Contador {
     }
     
     public void incrementar(){
-        /*for(int i=0;i<limite;i++){
-            
-        }*/
         valor++;
+        if(valor == limite){
+            valor=0;
+        }
+        
         
     }
     
