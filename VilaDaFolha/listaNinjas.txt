@@ -1,0 +1,4 @@
+Naruto Uzumaki;Hokage;32;1500000;/gui/images/naruto.png
+Sasuke Uchiha;Jounin;33;1000000;/gui/images/sasuke.png
+Alexandre Roque;Jounin;19;900000;/gui/images/alexandre.png
+Vitor Santana;Genin;22;800;/gui/images/ninjaDefault.png

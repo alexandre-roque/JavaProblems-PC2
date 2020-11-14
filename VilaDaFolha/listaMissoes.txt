@@ -1,0 +1,3 @@
+Resgate;Resgatar gato que está preso na fiação do hospital;D
+Envio;Levar pergaminho secreto para vila da areia;S
+Verificação;Verificar toda a área próxima ao prédio do Hokage;B
