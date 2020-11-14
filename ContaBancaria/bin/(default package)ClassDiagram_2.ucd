@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="(default package)ClassDiagram_2" foregroundRGB="255,255,255" id="{UMLID=_ciQIoIszEd2EFOBqgnJ-_g,JavaID=}" metadata="uml2-1.0" initialized="true" scrolledY="21" tag="1000" key="323030373036323920436F6E746142616E63617269612F4C756369616E61">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.2" name="ContaBancariaConsoleVisao" location="440,310" size="241,94" stereotype="" id="{UMLID=_fRBcAIszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaConsoleVisao}" runTimeClassModel="update(Ljava.util.Observable;Ljava.lang.Object;),ContaBancariaConsoleVisao(Lmodelo.ContaBancariaModelo;),modelo">
+    <children xsi:type="editmodel:CompartmentEditModel" size="51,16">
+      <children xsi:type="editmodel:AttributeEditModel" name="modelo" id="{UMLID=_KoyrYItBEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo@modelo+visao/ContaBancariaConsoleVisao@ownedEnd|modelo/ContaBancariaModelo#modelo}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="168,32">
+      <children xsi:type="editmodel:MethodEditModel" name="ContaBancariaConsoleVisao" id="{UMLID=_fdE7AoszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaConsoleVisao#ContaBancariaConsoleVisao(Lmodelo.ContaBancariaModelo;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="update" id="{UMLID=_fdhm8IszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaConsoleVisao#update(Ljava.util.Observable;Ljava.lang.Object;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:RealizationEditModel" size="2,1" description="Realization" autoLocated="true" source="//@children.0" target="//@children.5" targetEnd="//@children.0/@sourceConnections.0/@children.1" label="//@children.0/@sourceConnections.0/@children.2" sourceEnd="//@children.0/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="210,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="30,76"/>
+      <children xsi:type="editmodel:WireLabelEditModel" location="660,223" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" source="//@children.0" target="//@children.2" targetEnd="//@children.0/@sourceConnections.1/@children.1" label="//@children.0/@sourceConnections.1/@children.2" sourceEnd="//@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,94" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="145,206"/>
+      <children xsi:type="editmodel:WireLabelEditModel" location="453,537" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Observable" location="230,50" size="156,190" stereotype="" id="{UMLID=_AikwsIs-Ed2EFOBqgnJ-_g,JavaID=/Observable}" runTimeClassModel="getObserver(),addObservadores,setObserver1,notifyObservers(),removeObservadores,setObserver,observer">
+    <children xsi:type="editmodel:CompartmentEditModel" size="67,32">
+      <children xsi:type="editmodel:AttributeEditModel" name="observer" id="{UMLID=_N6rEIItHEd2EFOBqgnJ-_g,JavaID=@observer+/Observable@observable|#observer}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,112">
+      <children xsi:type="editmodel:MethodEditModel" name="setObserver1" id="{UMLID=_ouP0UItHEd2EFOBqgnJ-_g,JavaID=/Observable#setObserver1}" isAssociationMemeber="true"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getObserver" id="{UMLID=_OB5tgItHEd2EFOBqgnJ-_g,JavaID=/Observable#getObserver()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setObserver" id="{UMLID=_OB8JwItHEd2EFOBqgnJ-_g,JavaID=/Observable#setObserver}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addObservadores" id="{UMLID=_YTSM0Is-Ed2EFOBqgnJ-_g,JavaID=/Observable#addObservadores}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeObservadores" id="{UMLID=_yxctsIs-Ed2EFOBqgnJ-_g,JavaID=/Observable#removeObservadores}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="notifyObservers" id="{UMLID=_0uuSsIs-Ed2EFOBqgnJ-_g,JavaID=/Observable#notifyObservers()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.0/@sourceConnections.1" name="ContaBancariaModelo" location="201,310" size="217,206" stereotype="" id="{UMLID=_fdE7AYszEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo}" runTimeClassModel="depositaFundos(D),getSaldo(),removeObservadores(Ljava.util.Observer;),sacarFundos(D),observadores,notifyObservers(),ContaBancariaModelo(D),setSaldo(D),saldo,addObservadores(Ljava.util.Observer;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,32">
+      <children xsi:type="editmodel:AttributeEditModel" name="saldo" id="{UMLID=_9zwlkIszEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#saldo}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="observadores" id="{UMLID=_Of3DkItBEd2EFOBqgnJ-_g,JavaID=java.util/Observer@observadores+modelo/ContaBancariaModelo@ownedEnd|java.util/Observer#observadores}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="136,128">
+      <children xsi:type="editmodel:MethodEditModel" name="ContaBancariaModelo" id="{UMLID=_9z5viIszEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#ContaBancariaModelo(D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSaldo" id="{UMLID=_9zwlloszEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#getSaldo()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setSaldo" id="{UMLID=_9z5vhYszEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#setSaldo(D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="sacarFundos" id="{UMLID=_WDEBMIs_Ed2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#sacarFundos(D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="depositaFundos" id="{UMLID=_WDHEgIs_Ed2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#depositaFundos(D)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="addObservadores" id="{UMLID=_NabFgItBEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#addObservadores(Ljava.util.Observer;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="removeObservadores" id="{UMLID=_NaeI0ItBEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#removeObservadores(Ljava.util.Observer;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="notifyObservers" id="{UMLID=_NaglEItBEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo#notifyObservers()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.4/@sourceConnections.1" name="ContaBancariaVisao" location="700,310" size="190,270" stereotype="" id="{UMLID=_nTCKoIszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao}" runTimeClassModel="getSaldo(),ContaBancariaVisao(Lmodelo.ContaBancariaModelo;),botaoDeposito,campoValorASacar,controle,SAQUE,DEPOSITO,update(Ljava.util.Observable;Ljava.lang.Object;),anexaControlador(Lcontrole.ContaBancariaControle;),constroiUI(),modelo,criaControlador(),nomeSaldoDisponivel,botaoSaque">
+    <children xsi:type="editmodel:CompartmentEditModel" size="119,128">
+      <children xsi:type="editmodel:AttributeEditModel" name="DEPOSITO" id="{UMLID=_nTxxgIszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#DEPOSITO}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="SAQUE" id="{UMLID=_nUFThIszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#SAQUE}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="modelo" id="{UMLID=_SHQBAItBEd2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo@modelo+visao/ContaBancariaVisao@ownedEnd|modelo/ContaBancariaModelo#modelo}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="controle" id="{UMLID=_nUFTgYszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao@visao+controle/ContaBancariaControle@controle|controle/ContaBancariaControle#controle}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="botaoDeposito" id="{UMLID=_nTxxgoszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#botaoDeposito}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="botaoSaque" id="{UMLID=_nUFTgIszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#botaoSaque}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="campoValorASacar" id="{UMLID=_nTxxhIszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#campoValorASacar}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="nomeSaldoDisponivel" id="{UMLID=_nT7igoszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#nomeSaldoDisponivel}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="129,96">
+      <children xsi:type="editmodel:MethodEditModel" name="ContaBancariaVisao" id="{UMLID=_nUFThoszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#ContaBancariaVisao(Lmodelo.ContaBancariaModelo;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="update" id="{UMLID=_nUFTiYszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#update(Ljava.util.Observable;Ljava.lang.Object;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getSaldo" id="{UMLID=_nUYOdIszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#getSaldo()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="anexaControlador" id="{UMLID=_nUYOcYszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#anexaControlador(Lcontrole.ContaBancariaControle;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="criaControlador" id="{UMLID=_nUOddIszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#criaControlador()}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="constroiUI" id="{UMLID=_nUFThYszEd2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao#constroiUI()}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:RealizationEditModel" size="2,1" description="Realization" autoLocated="true" source="//@children.3" target="//@children.5" targetEnd="//@children.3/@sourceConnections.0/@children.1" label="//@children.3/@sourceConnections.0/@children.2" sourceEnd="//@children.3/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="27,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="107,76"/>
+      <children xsi:type="editmodel:WireLabelEditModel" location="737,223" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="ContaBancariaControle" location="913,310" size="228,110" stereotype="" id="{UMLID=_nUFTg4szEd2EFOBqgnJ-_g,JavaID=controle/ContaBancariaControle}" runTimeClassModel="actionPerformed(Ljava.awt.event.ActionEvent;),modelo,ContaBancariaControle(Lvisao.ContaBancariaVisao;Lmodelo.ContaBancariaModelo;),visao">
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:AttributeEditModel" name="visao" id="{UMLID=_Dda8wYs0Ed2EFOBqgnJ-_g,JavaID=visao/ContaBancariaVisao@visao+controle/ContaBancariaControle@controle|visao/ContaBancariaVisao#visao}"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="modelo" id="{UMLID=_Dda8wIs0Ed2EFOBqgnJ-_g,JavaID=modelo/ContaBancariaModelo@modelo+controle/ContaBancariaControle@ownedEnd|modelo/ContaBancariaModelo#modelo}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="141,32">
+      <children xsi:type="editmodel:MethodEditModel" name="ContaBancariaControle" id="{UMLID=_DdktwIs0Ed2EFOBqgnJ-_g,JavaID=controle/ContaBancariaControle#ContaBancariaControle(Lvisao.ContaBancariaVisao;Lmodelo.ContaBancariaModelo;)}"/>
+      <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="{UMLID=_DdktxYs0Ed2EFOBqgnJ-_g,JavaID=controle/ContaBancariaControle#actionPerformed(Ljava.awt.event.ActionEvent;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:RealizationEditModel" size="2,1" description="Realization" autoLocated="true" source="//@children.4" target="//@children.6" targetEnd="//@children.4/@sourceConnections.0/@children.1" label="//@children.4/@sourceConnections.0/@children.2" sourceEnd="//@children.4/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="113,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="106,76"/>
+      <children xsi:type="editmodel:WireLabelEditModel" location="1036,216" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" source="//@children.4" target="//@children.3" targetEnd="//@children.4/@sourceConnections.1/@children.1" label="//@children.4/@sourceConnections.1/@children.2" sourceEnd="//@children.4/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="186,110" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="146,270"/>
+      <children xsi:type="editmodel:WireLabelEditModel" location="978,601" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" size="2,1" source="//@children.4" target="//@children.0" targetEnd="//@children.4/@sourceConnections.2/@children.1" label="//@children.4/@sourceConnections.2/@children.2" sourceEnd="//@children.4/@sourceConnections.2/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="142,0"/>
+      <children xsi:type="editmodel:WireLabelEditModel" location="793,261" size="0,14" fontInfo="Arial-8-0" anchorKind="MiddlePart"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true" showAttributes="true" showLiterals="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.0/@sourceConnections.0" name="Observer" location="620,74" size="136,76" id="{UMLID=_Am6IAItHEd2EFOBqgnJ-_g,JavaID=java.util/Observer}" runTimeClassModel="update(Ljava.util.Observable;Ljava.lang.Object;)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="63,16">
+      <children xsi:type="editmodel:MethodEditModel" name="update" id="{UMLID=_hsJqkItHEd2EFOBqgnJ-_g,JavaID=java.util/Observer#update(Ljava.util.Observable;Ljava.lang.Object;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.4/@sourceConnections.0" name="ActionListener" location="920,60" size="213,76" id="{UMLID=_obD9IItIEd2EFOBqgnJ-_g,JavaID=java.awt.event/ActionListener}">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="111,16">
+      <children xsi:type="editmodel:MethodEditModel" name="actionPerformed" id="{UMLID=_obHAcItIEd2EFOBqgnJ-_g,JavaID=java.awt.event/ActionListener#actionPerformed(Ljava.awt.event.ActionEvent;)}"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showMethods="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="10,10" gridOrigin="0,0" rulerUnit="pixel">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" innerClassSorter="Natural" showPrivateAttributes="true" showProtectedAttributes="true" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showProtectedMethods="true" showPublicMethods="true" showPackageMethods="true" showPrivateMethods="true" showStaticMethods="true" showProtectedInnerClasses="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showPrivateInnerClasses="true" showStaticInnerClasses="true" showInterfaceStereotype="true" showMethods="true" showAttributes="true" showLiterlas="true" showInnerEntity="true"/>
+</editmodel:ClassDiagramEditModel>
