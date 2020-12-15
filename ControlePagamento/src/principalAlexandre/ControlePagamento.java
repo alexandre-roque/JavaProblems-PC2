@@ -16,22 +16,6 @@ public class ControlePagamento {
         this.pagaveis = pagaveis;
     }
 
-    public static double getSALARIO() {
-        return SALARIO;
-    }
-
-    public static void setSALARIO(double SALARIO) {
-        ControlePagamento.SALARIO = SALARIO;
-    }
-
-    public static double getHORA() {
-        return HORA;
-    }
-
-    public static void setHORA(double HORA) {
-        ControlePagamento.HORA = HORA;
-    }
-
     public ArrayList<Pagavel> getPagaveis() {
         return pagaveis;
     }

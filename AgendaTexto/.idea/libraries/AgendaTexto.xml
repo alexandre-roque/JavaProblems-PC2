@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AgendaTexto">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/AgendaTexto.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

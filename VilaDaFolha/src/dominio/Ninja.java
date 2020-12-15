@@ -1,16 +1,18 @@
 package dominio;
 
+
 /**
  *
  * @authors Alexandre Roque, Henrique Coelho, Nasser Rafael, Ronaldo Zica e Vitor Santana.
  */
 public class Ninja {
+    
     private String nome;
     private int idade;
     private String rank;
     private double merito;
     private String imagem;
-
+    
     public Ninja(String nome, int idade, String rank, double merito, String imagem) {
         this.nome = nome;
         this.idade = idade;
@@ -22,8 +24,7 @@ public class Ninja {
         else
             this.imagem = imagem;
     }
-    
-
+   
     public String getNome() {
         return nome;
     }

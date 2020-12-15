@@ -5,22 +5,29 @@
  */
 package gui;
 
+import dominio.ControleMissoes;
+import dominio.ControleNinjas;
 import dominio.Missao;
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import java.util.Observable;
+import java.util.Observer;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author alexa
  */
-public class TelaMissao extends javax.swing.JInternalFrame {
+public class TelaMissao extends javax.swing.JInternalFrame implements Observer {
 
     /**
      * Creates new form TelaMissao
      */
-    public TelaMissao(ArrayList<Missao> missoes) {
-        this.missoes = missoes;
+    public TelaMissao(ControleMissoes controleMissoes, javax.swing.JInternalFrame telaNinja) {
+        this.telaNinja = telaNinja;
+        this.controleMissoes = controleMissoes;
+        this.missoes = controleMissoes.getMissoes();
         initComponents(); // PODEM TER 25 CARACTERES POR LINHA NO LABEL "mensagem"
         iniciaLista();
     }
@@ -51,11 +58,28 @@ public class TelaMissao extends javax.swing.JInternalFrame {
         fundoPergaminho = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         dificuldadeMissao = new javax.swing.JTextArea();
+        atribuirMissao = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setClosable(true);
         setTitle("Missões");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/images/pergaminhoIcon.jpg"))); // NOI18N
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         listaMissoes.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -78,8 +102,9 @@ public class TelaMissao extends javax.swing.JInternalFrame {
         jPanel1.setLayout(null);
 
         descricaoMissaoPergaminho.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        descricaoMissaoPergaminho.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jPanel1.add(descricaoMissaoPergaminho);
-        descricaoMissaoPergaminho.setBounds(30, 30, 200, 50);
+        descricaoMissaoPergaminho.setBounds(30, 30, 200, 160);
 
         fundoPergaminho.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/images/pergaminho.jpg"))); // NOI18N
         jPanel1.add(fundoPergaminho);
@@ -93,6 +118,13 @@ public class TelaMissao extends javax.swing.JInternalFrame {
         dificuldadeMissao.setFocusable(false);
         jScrollPane2.setViewportView(dificuldadeMissao);
 
+        atribuirMissao.setText("Atribuir missão");
+        atribuirMissao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atribuirMissao(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,37 +134,40 @@ public class TelaMissao extends javax.swing.JInternalFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelDescricao)
+                    .addComponent(rankMissao))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                        .addComponent(atribuirMissao, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelDescricao)
-                            .addComponent(rankMissao))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 232, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(rankMissao)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelDescricao)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(rankMissao)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(5, 5, 5))
+                                .addComponent(labelDescricao)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                .addContainerGap()
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
+                                .addComponent(atribuirMissao, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(5, 5, 5))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(19, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -141,39 +176,64 @@ public class TelaMissao extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void listaMissoesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listaMissoesValueChanged
-        int index = listaMissoes.getSelectedIndex();
-
+        int index = 0;
         String descricao = "";
         String descricaoRank;
-        descricao = ("<html>"+this.missoes.get(index).getDescricao()+"<html>");
         
-        String rank = this.missoes.get(index).getRank();
-        
-        rankMissao.setText("Rank: "+rank);
-        descricaoMissaoPergaminho.setText(descricao);
-        
-        if(this.missoes.get(index).getRank().equals("S")){
-            dificuldadeMissao.setText("Essa missão é muito difícil, apesar de te conceder muito mérito, existe um perigo eminente de você perder a vida");
+        if(listaMissoes.getSelectedIndex() >= 0 && listaMissoes.getSelectedIndex() <= missoes.size()){
+            index = listaMissoes.getSelectedIndex();
+            
+            descricao = ("<html>"+this.missoes.get(index).getDescricao()+"<html>");
+
+            String rank = this.missoes.get(index).getRank();
+
+            rankMissao.setText("Rank: "+rank);
+            descricaoMissaoPergaminho.setText(descricao);
+
+            if(this.missoes.get(index).getRank().equals("S")){
+                dificuldadeMissao.setText("Rank S — atribuída apenas para jounnin experiente ou para classificações de nível maior, como os kage.");
+            }
+            if(this.missoes.get(index).getRank().equals("A")){
+                dificuldadeMissao.setText("Rank A — são missões atribuídas para jounnin ou níveis superiores. As missões deste nível abrangem todos os tipos de missões existentes, no entanto, de forma moderada ou superior às de seus níveis menores");
+            }
+            if(this.missoes.get(index).getRank().equals("B")){
+                dificuldadeMissao.setText("Rank B — normalmente atribuídas para chunnin com uma experiência notável ou para um recém jounnin. Este rankeamento abrange normalmente confrontos diretos com outros ninjas, assassinatos e espionagens secretas");
+            }
+            if(this.missoes.get(index).getRank().equals("C")){
+                dificuldadeMissao.setText("Rank C — atribuídas apenas para aqueles que estão no nível gennin em um tempo considerável ou para um chūnin. As missões deste rank normalmente tem baixas chances de um confronto direto com um outro adversário.");
+            }
+            if(this.missoes.get(index).getRank().equals("D")){
+                dificuldadeMissao.setText("Rank D: são missões normalmente atribuídas para aqueles que acabaram de tornar-se um gennin. Estas missões não apresentam nenhum tipo de risco devido geralmente ser pequenos trabalhos em sua vila ou nas redondezas dela");
+            }
         }
-        if(this.missoes.get(index).getRank().equals("A")){
-            dificuldadeMissao.setText("Essa missão é difícil, apesar de te conceder mérito, existe um perigo de você perder a vida");
-        }
-        if(this.missoes.get(index).getRank().equals("B")){
-            dificuldadeMissao.setText("Essa missão é tranquila, mas não deve ser subestimada");
-        }
-        if(this.missoes.get(index).getRank().equals("C")){
-            dificuldadeMissao.setText("Essa missão é muito tranquila");
-        }
-        if(this.missoes.get(index).getRank().equals("D")){
-            dificuldadeMissao.setText("Essa missão é fácil");
-        }
-        
         
     }//GEN-LAST:event_listaMissoesValueChanged
 
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        
+    }//GEN-LAST:event_formInternalFrameClosing
+
+    private void atribuirMissao(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atribuirMissao
+        JOptionPane.showMessageDialog(this, "Escolha um ninja para fazer essa missão!", "Aviso", JOptionPane.INFORMATION_MESSAGE);
+        this.dispose();
+        ((TelaNinja) telaNinja).setDesignarMissao(true);
+        ((TelaNinja) telaNinja).setDificuldadeMissaoAtribuida(this.rankMissao.getText());
+        ((TelaNinja) telaNinja).clearCampos();
+        telaNinja.show();
+    }//GEN-LAST:event_atribuirMissao
+
+    public void clearCampos(){
+        descricaoMissaoPergaminho.setText("");
+        dificuldadeMissao.setText("");
+        listaMissoes.clearSelection();
+    }
+    
+    private ControleMissoes controleMissoes;
     private ArrayList<Missao> missoes;
+    private javax.swing.JInternalFrame telaNinja;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atribuirMissao;
     private javax.swing.JLabel descricaoMissaoPergaminho;
     private javax.swing.JTextArea dificuldadeMissao;
     private javax.swing.JLabel fundoPergaminho;
@@ -184,5 +244,12 @@ public class TelaMissao extends javax.swing.JInternalFrame {
     private javax.swing.JList<String> listaMissoes;
     private javax.swing.JLabel rankMissao;
     // End of variables declaration//GEN-END:variables
+
+    @Override
+    public void update(Observable o, Object arg) {
+        ControleMissoes controleAuxMissoes = (ControleMissoes)o;
+        this.missoes = controleAuxMissoes.getMissoes();
+        iniciaLista();
+    }
 
 }

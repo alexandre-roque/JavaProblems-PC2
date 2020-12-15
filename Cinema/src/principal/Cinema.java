@@ -1,6 +1,7 @@
 package principal;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Cinema {
@@ -98,8 +99,16 @@ public class Cinema {
             if(aux.equals("0")){
                 i = 0;
             }
+ 
+            
+            
             
         }
+        
+        HashMap<Integer, Integer> teste = new HashMap<>();
+        teste.put(1, 2);
+        teste.put(1, 3);
+        System.out.println(teste.get(1));
         
         sala1.exibeAssentosOcupados();
         

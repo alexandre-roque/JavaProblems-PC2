@@ -26,7 +26,7 @@ public class Terceirizado extends Empregado {
     
     @Override
     public double getValorAPagar(){
-        double salario = (ControlePagamento.getHORA() * this.getHorasTrabalhadas());
+        double salario = (ControlePagamento.HORA * this.getHorasTrabalhadas());
         
         return salario;
     }

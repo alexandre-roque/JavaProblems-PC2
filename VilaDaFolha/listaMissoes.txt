@@ -1,3 +1,8 @@
 Resgate;Resgatar gato que está preso na fiação do hospital;D
 Envio;Levar pergaminho secreto para vila da areia;S
 Verificação;Verificar toda a área próxima ao prédio do Hokage;B
+Espionagem;Vá para a vila do som e veja o que Orochimaru está fazendo escondido a tanto tempo.;A
+Exame Chunnin;Ajudar na organização do exame chunnin;D
+Massacre ;Elimine todos os bandidos malfeitores perto das redondezas da vila da areia, isso têm de ser feito sem levantar suspeitas;A
+Escoitamento ;Escoute a comissão da vila da névoa até o ponto de encontro e tenha cuidado com caçadores de recompensas;B
+Infiltração ;Infiltre-se na vila do som e consiga informações sobre o possível ataque;S

@@ -26,19 +26,21 @@ public class AssalariadoComissionado extends Comissionario {
         this.horasTrabalhadas = horasTrabalhadas;
     }
 
+    @Override
     public double getTotalVendas() {
         return totalVendas;
     }
 
+    @Override
     public void setTotalVendas(double totalVendas) {
         this.totalVendas = totalVendas;
     }
     
     @Override
     public double getValorAPagar(){
-        double salario = ControlePagamento.getSALARIO();
+        double salario = ControlePagamento.SALARIO;
         if(this.getHorasTrabalhadas() > 40){
-            salario += (this.getHorasTrabalhadas() - 40) * ControlePagamento.getHORA();
+            salario += (this.getHorasTrabalhadas() - 40) * ControlePagamento.HORA;
         }
         
         salario += (this.getTotalVendas() * 0.06);

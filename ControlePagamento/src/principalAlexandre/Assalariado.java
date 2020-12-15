@@ -26,9 +26,9 @@ public class Assalariado extends Empregado {
     
     @Override
     public double getValorAPagar(){
-        double salario = ControlePagamento.getSALARIO();
+        double salario = ControlePagamento.SALARIO;
         if(this.getHorasTrabalhadas() > 40){
-            salario += (this.getHorasTrabalhadas() - 40) * ControlePagamento.getHORA();
+            salario += (this.getHorasTrabalhadas() - 40) * ControlePagamento.HORA;
         }
         return salario + (salario*0.1);
     }
