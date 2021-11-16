@@ -10,3 +10,4 @@ Marcelo;Genin;20;15.0;/gui/images/ninjaDefault.png
 Shanks;Jounin;42;100000.0;/gui/images/ninjaDefault.png
 Bia Souza;Jounin;25;980000.0;/gui/images/ninjaDefault.png
 Tsunade;Sennin Lendário;60;800000.0;/gui/images/ninjaDefault.png
+Minho;Jounin;123;1000000.0;/gui/images/ninjaDefault.png

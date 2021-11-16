@@ -1,8 +1,9 @@
-Nasser Rafael;129381283128;Rua leo;nasser@gmail.com
-Alexandre Roque;(031)986579962;Rua das Begônias;alexandreroque1@hotmail.com
-Maria Fernanda;(037)00000000;Rua Rio de Janeiro;maria@cefet.br
-Henrique Coelhowwwwwwwww;12391823901;Rua Summoners Rift;coelhoww@lolzin.br
-Tia Luciana;567346789;Rua Cefet;luciana@cefet.br
-Ronaldin Zica;Rua Zicosa;3192037594;ronaldozica321@cefet.br
-Fernando;dasdasd;asdaisd;dws
-Vitor Santana;(011)9111111;Rua Aleatória;vitorsantana@cefet.br
+Alexandre Roque;Rua das Begônias;(031)986579962;alexandreroque1@hotmail.com
+Henrique Coelhowwwwwwwww;Rua Summoners Rift;12391823901;coelhoww@lolzin.br
+Fernando;asdaisd;dasdasd;dws
+Ronaldin Zica;3192037594;Rua Zicosa;ronaldozica321@cefet.br
+Nasser Rafael;Rua leolino ;129381283128;nasser@gmail.com
+Maria Fernanda;Rua Rio de Janeiro;(037)00000000;maria@cefet.br
+Vitor Santana;Rua Aleatória;(011)9111111;vitorsantana@cefet.br
+Darmes;31949183192;Rua do lindão;minhoad@hotmail.com
+Tia Luciana;Rua Cefet;567346789;luciana@cefet.br
